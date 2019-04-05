@@ -10,12 +10,18 @@ package ec.edu.est.clases;
  * @author 59398
  */
 public class HistorialCalificaciones {
+
     private Materia materia;
     private Estudiante estudiante;
     private int aprovechamiento1;
     private int examen1;
     private int aprovechamiento2;
     private int examen2;
+
+    @Override
+    public String toString() {
+        return "HistorialCalificaciones{" + "materia=" + materia + ", estudiante=" + estudiante + ", aprovechamiento1=" + aprovechamiento1 + ", examen1=" + examen1 + ", aprovechamiento2=" + aprovechamiento2 + ", examen2=" + examen2 + '}';
+    }
 
     public Materia getMateria() {
         return materia;
@@ -64,8 +70,5 @@ public class HistorialCalificaciones {
     public void setExamen2(int examen2) {
         this.examen2 = examen2;
     }
-    
-    
-    
 
 }

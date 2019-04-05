@@ -10,12 +10,18 @@ package ec.edu.est.clases;
  * @author 59398
  */
 public class Persona {
-        private int codigo;
-        private String nombre;  
-        private String cedula; 
+
+    private int codigo;
+    private String nombre;
+    private String cedula;
     private String telefono;
     private String correo;
-    private Sede  Sede;
+    private Sede Sede;
+
+    @Override
+    public String toString() {
+        return "Persona{" + "codigo=" + codigo + ", nombre=" + nombre + ", cedula=" + cedula + ", telefono=" + telefono + ", correo=" + correo + ", Sede=" + Sede + '}';
+    }
 
     public int getCodigo() {
         return codigo;
@@ -64,7 +70,5 @@ public class Persona {
     public void setSede(Sede Sede) {
         this.Sede = Sede;
     }
-    
-    
 
 }

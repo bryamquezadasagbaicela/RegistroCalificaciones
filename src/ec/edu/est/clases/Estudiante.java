@@ -10,7 +10,13 @@ package ec.edu.est.clases;
  * @author 59398
  */
 public class Estudiante {
+
     private Carrera carrera;
+
+    @Override
+    public String toString() {
+        return "Estudiante{" + "carrera=" + carrera + '}';
+    }
 
     public Carrera getCarrera() {
         return carrera;
@@ -19,7 +25,5 @@ public class Estudiante {
     public void setCarrera(Carrera carrera) {
         this.carrera = carrera;
     }
-    
-    
 
 }

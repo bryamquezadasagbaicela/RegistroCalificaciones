@@ -12,11 +12,17 @@ import java.util.List;
  * @author 59398
  */
 public class Sede {
+
     private int codigo;
     private String nombre;
     private String direccion;
     private String telefono;
-    private List<Carrera> carreras; 
+    private List<Carrera> carreras;
+
+    @Override
+    public String toString() {
+        return "Sede{" + "codigo=" + codigo + ", nombre=" + nombre + ", direccion=" + direccion + ", telefono=" + telefono + ", carreras=" + carreras + '}';
+    }
 
     public int getCodigo() {
         return codigo;
@@ -57,7 +63,5 @@ public class Sede {
     public void setCarreras(List<Carrera> carreras) {
         this.carreras = carreras;
     }
-    
-    
 
 }

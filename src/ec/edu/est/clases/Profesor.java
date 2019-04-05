@@ -10,9 +10,15 @@ package ec.edu.est.clases;
  * @author 59398
  */
 public class Profesor {
+
     private String titulo;
     private double salario;
     private String cargo;
+
+    @Override
+    public String toString() {
+        return "Profesor{" + "titulo=" + titulo + ", salario=" + salario + ", cargo=" + cargo + '}';
+    }
 
     public String getTitulo() {
         return titulo;
@@ -37,7 +43,5 @@ public class Profesor {
     public void setCargo(String cargo) {
         this.cargo = cargo;
     }
-    
-    
 
 }

@@ -12,12 +12,18 @@ import java.util.List;
  * @author 59398
  */
 public class Carrera {
+
     private int codigo;
     private String nombre;
     private List<Materia> materias;
     private int numeroSemestres;
     private int numeroEstudiantes;
     private String titulo;
+
+    @Override
+    public String toString() {
+        return "Carrera{" + "codigo=" + codigo + ", nombre=" + nombre + ", materias=" + materias + ", numeroSemestres=" + numeroSemestres + ", numeroEstudiantes=" + numeroEstudiantes + ", titulo=" + titulo + '}';
+    }
 
     public int getCodigo() {
         return codigo;
@@ -66,7 +72,5 @@ public class Carrera {
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
-    
-    
 
 }
