@@ -9,7 +9,7 @@ package ec.edu.est.clases;
  *
  * @author 59398
  */
-public class Profesor {
+public class Profesor extends Persona {
 
     private String titulo;
     private double salario;
