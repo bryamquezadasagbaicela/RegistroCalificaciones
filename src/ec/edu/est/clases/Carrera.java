@@ -5,6 +5,7 @@
  */
 package ec.edu.est.clases;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,10 +21,25 @@ public class Carrera {
     private int numeroEstudiantes;
     private String titulo;
 
+    public Carrera(int codigo, String nombre, int numeroSemestres, int numeroEstudiantes, String titulo) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.numeroSemestres = numeroSemestres;
+        this.numeroEstudiantes = numeroEstudiantes;
+        this.titulo = titulo;
+        materias = new ArrayList<>();
+    }
+
+    public Carrera(int i, String computacion, String string, String string0, String ing_computacion) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     @Override
     public String toString() {
         return "Carrera{" + "codigo=" + codigo + ", nombre=" + nombre + ", materias=" + materias + ", numeroSemestres=" + numeroSemestres + ", numeroEstudiantes=" + numeroEstudiantes + ", titulo=" + titulo + '}';
     }
+    
+    
 
     public int getCodigo() {
         return codigo;
@@ -45,8 +61,8 @@ public class Carrera {
         return materias;
     }
 
-    public void setMaterias(List<Materia> materias) {
-        this.materias = materias;
+    public void setMaterias(Materia maters) {
+        materias.add(maters);
     }
 
     public int getNumeroSemestres() {
@@ -72,5 +88,9 @@ public class Carrera {
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
+      public void agregarMateria(Materia materia1){
+        this.materias.add(materia1);        
+    }
 
+ 
 }

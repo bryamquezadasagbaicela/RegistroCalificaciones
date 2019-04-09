@@ -20,6 +20,18 @@ public class Profesor extends Persona {
         return "Profesor{" + "titulo=" + titulo + ", salario=" + salario + ", cargo=" + cargo + '}';
     }
 
+    public Profesor(){
+    
+    }
+
+    public Profesor(int codigo, String nombre, String cedula, String telefono, String correo) {
+        super(codigo, nombre, cedula, telefono, correo);
+    }
+
+    public Profesor(int codigo) {
+        super(codigo);
+    }
+    
     public String getTitulo() {
         return titulo;
     }
@@ -28,20 +40,19 @@ public class Profesor extends Persona {
         this.titulo = titulo;
     }
 
-    public double getSalario() {
-        return salario;
+    public double getSalario(int horasTrabajando, double valorPorHora) {
+        return salario + horasTrabajando + valorPorHora;
     }
 
-    public void setSalario(double salario) {
-        this.salario = salario;
+    public double getSalario(int comision){
+        return salario = (salario + comision);
+        
     }
-
+    
     public String getCargo() {
         return cargo;
     }
 
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
-    }
+ 
 
 }

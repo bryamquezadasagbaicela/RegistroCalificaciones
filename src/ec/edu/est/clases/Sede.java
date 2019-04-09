@@ -5,6 +5,7 @@
  */
 package ec.edu.est.clases;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,6 +20,21 @@ public class Sede {
     private String telefono;
     private List<Carrera> carreras;
 
+
+    public Sede(int codigo, String nombre, String direccion, String telefono) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        carreras = new ArrayList<>();
+  
+    }
+    
+    public Sede(){
+      
+    }
+    
+    
     @Override
     public String toString() {
         return "Sede{" + "codigo=" + codigo + ", nombre=" + nombre + ", direccion=" + direccion + ", telefono=" + telefono + ", carreras=" + carreras + '}';
@@ -63,5 +79,13 @@ public class Sede {
     public void setCarreras(List<Carrera> carreras) {
         this.carreras = carreras;
     }
+    
+    public void agregarCarrera(Carrera carrer){
+       carreras.add(carrer);
+        
+        
+    }
+
+
 
 }

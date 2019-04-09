@@ -5,6 +5,7 @@
  */
 package ec.edu.est.clases;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,6 +22,23 @@ public class Materia {
     private List<Grupo> grupo;
     private List<Profesor> profesor;
 
+    public Materia(int codigo, String nombre, int numeroCreditos, int numeroHoras, int nivel) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.numeroCreditos = numeroCreditos;
+        this.numeroHoras = numeroHoras;
+        this.nivel = nivel;
+        grupo = new ArrayList<>();
+        profesor = new ArrayList<>();
+
+    }
+
+    public Materia() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
+    
     @Override
     public String toString() {
         return "Materia{" + "codigo=" + codigo + ", nombre=" + nombre + ", numeroCreditos=" + numeroCreditos + ", numeroHoras=" + numeroHoras + ", nivel=" + nivel + ", grupo=" + grupo + ", profesor=" + profesor + '}';
@@ -70,16 +88,25 @@ public class Materia {
         return grupo;
     }
 
-    public void setGrupo(List<Grupo> grupo) {
-        this.grupo = grupo;
+    public void setGrupo(Grupo grup) {
+        grupo.add(grup);
     }
 
     public List<Profesor> getProfesor() {
         return profesor;
     }
 
-    public void setProfesor(List<Profesor> profesor) {
-        this.profesor = profesor;
+    public void setProfesor(Profesor prof) {
+       profesor.add (prof) ;
     }
+    
+   public void agregarProfesor(Profesor profe){
+        profesor.add(profe);
+    }
+
+    public void agregarGrupo(Grupo primerGrupo) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+            
 
 }

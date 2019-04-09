@@ -15,6 +15,19 @@ public class Grupo {
     private String nombre;
     private int cupo;
 
+    public Grupo(int codigo, String nombre, int cupo) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.cupo = cupo;
+    }
+
+    public Grupo() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
+        
+    
     @Override
     public String toString() {
         return "Grupo{" + "codigo=" + codigo + ", nombre=" + nombre + ", cupo=" + cupo + '}';
